@@ -14,7 +14,7 @@ namespace Delegate
             double radius = Convert.ToDouble(Console.ReadLine());
             Func<double, double> calcDelegate = Circumference;
             calcDelegate = calcDelegate + SqrCircle + VolBall;
-            calcDelegate(radius);
+            calcDelegate?.Invoke(radius);
             Console.ReadKey();
         }
 
